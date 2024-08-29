@@ -11,19 +11,12 @@ function Navbar() {
 
     return (
         <nav className="navbar">
+            <div className={`navbar-links ${isOpen ? 'open' : ''}`}>
+                <Link to="/menu">Home</Link>
+            </div>
+
             <div className="navbar-logo">
                 <h2>SPT</h2>
-            </div>
-            <div className={`navbar-links ${isOpen ? 'open' : ''}`}>
-            <Link to="/menu">Home</Link>
-                {/* <a href="#about">About</a>
-                <a href="#services">Services</a>
-                <a href="#contact">Contact</a> */}
-            </div>
-            <div className="navbar-toggle" onClick={toggleNavbar}>
-                <span className="bar"></span>
-                <span className="bar"></span>
-                <span className="bar"></span>
             </div>
         </nav>
     );
